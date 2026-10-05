@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'MAVEN_HOME'
+    }
+
     environment {
         APP_NAME    = 'java-project'
         APP_VERSION = '1.0.0'
@@ -60,8 +64,6 @@ pipeline {
             steps {
                 echo "========== STAGE: Deploy =========="
                 echo "Deploying ${JAR_NAME}..."
-                // Add Windows deployment commands here, e.g.:
-                // bat 'copy target\\${JAR_NAME} C:\\app\\'
                 echo "Deployment complete!"
             }
         }
