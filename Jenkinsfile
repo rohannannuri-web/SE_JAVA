@@ -24,6 +24,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo "========== STAGE: Build =========="
+                echo "--- Diagnostics ---"
+                bat 'echo JAVA_HOME=%JAVA_HOME%'
+                bat 'echo M2_HOME=%M2_HOME%'
+                bat 'java -version'
+                bat 'mvn --version'
+                echo "--- Running Build ---"
                 bat 'mvn clean compile -B'
             }
         }
