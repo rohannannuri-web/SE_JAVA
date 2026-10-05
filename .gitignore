@@ -1,0 +1,12 @@
+# Java Project - Git Ignore
+target/
+*.class
+*.jar
+*.war
+*.ear
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+.mvn/
